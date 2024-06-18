@@ -141,6 +141,7 @@ class CarRentalSystem {
             System.out.println("1. Rent a Car");
             System.out.println("2. Return a Car");
             System.out.println("3. Exit");
+            System.out.println("4. History");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -230,7 +231,19 @@ class CarRentalSystem {
                 }
             } else if (choice == 3) {
                 break;
-            } else {
+                } else if(choice == 4) {
+                	System.out.println("Total availabe car: ");
+                	for (Car car : cars) {
+                        if (car.isAvailable()) {
+                            System.out.println(car.getCarId() + " - " + car.getBrand() + " " + car.getModel());
+                        }
+                    }
+                	
+                	System.out.println("Total car are goes on rent: ");
+                	
+                }
+            
+            else {
                 System.out.println("Invalid choice. Please enter a valid option.");
             }
         }
