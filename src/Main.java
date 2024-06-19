@@ -140,8 +140,8 @@ class CarRentalSystem {
             System.out.println("===== Car Rental System =====");
             System.out.println("1. Rent a Car");
             System.out.println("2. Return a Car");
-            System.out.println("3. Exit");
-            System.out.println("4. History");
+            System.out.println("3. History");
+            System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -229,9 +229,7 @@ class CarRentalSystem {
                 } else {
                     System.out.println("Invalid car ID or car is not rented.");
                 }
-            } else if (choice == 3) {
-                break;
-                } else if(choice == 4) {
+            }  else if(choice == 3) {
                 	System.out.println("Total availabe car: ");
                 	for (Car car : cars) {
                         if (car.isAvailable()) {
@@ -239,8 +237,11 @@ class CarRentalSystem {
                         }
                     }
                 	
-                	System.out.println("Total car are goes on rent: ");
                 	
+                	
+                }
+            else if (choice == 4) {
+                break;
                 }
             
             else {
